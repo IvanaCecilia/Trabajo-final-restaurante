@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nombre del Restaurante: menú y reservas online.">
+    <title>Inicio | Nombre del Restaurante</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado">
+        <a class="marca" href="index.html">Nombre del Restaurante</a>
+
+        <nav class="nav-principal" aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html" aria-current="page">Inicio</a></li>
+                <li><a href="menu.html">Menú</a></li>
+                <li><a href="reserva.html">Reservar</a></li>
+                <li><a href="login.html">Ingresar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contenido">
+        <section class="portada" aria-labelledby="titulo-portada">
+            <img src="img/portada.jpg" alt="Salón del restaurante con las mesas preparadas para la cena">
+            <h1 id="titulo-portada">Nombre del Restaurante</h1>
+            <p>Cocina casera, parrilla y pastas en un ambiente familiar.</p>
+            <a class="boton" href="reserva.html">Reservar una mesa</a>
+            <a class="boton boton--secundario" href="menu.html">Ver el menú</a>
+        </section>
+
+        <section aria-labelledby="titulo-nosotros">
+            <h2 id="titulo-nosotros">Sobre nosotros</h2>
+            <p>Somos un restaurante familiar con más de 20 años en el barrio. Trabajamos con productos frescos y recetas de siempre.</p>
+        </section>
+
+        <section aria-labelledby="titulo-horarios">
+            <h2 id="titulo-horarios">Horarios</h2>
+            <ul>
+                <li>Martes a domingo · Mediodía: 12:00 a 15:30 hs</li>
+                <li>Martes a domingo · Noche: 20:00 a 23:30 hs</li>
+                <li>Lunes: cerrado</li>
+            </ul>
+        </section>
+
+        <section aria-labelledby="titulo-ubicacion">
+            <h2 id="titulo-ubicacion">Dónde estamos</h2>
+            <address>Av. Siempre Viva 742, Lomas de Zamora</address>
+        </section>
+
+        <section aria-labelledby="titulo-reservas">
+            <h2 id="titulo-reservas">Reservas</h2>
+            <p>Reservá tu mesa online y te confirmamos al instante si hay lugar.</p>
+            <a class="boton" href="reserva.html">Hacer una reserva</a>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <p><strong>Nombre del Restaurante</strong></p>
+        <address>
+            Av. Siempre Viva 742, Lomas de Zamora<br>
+            Tel: <a href="tel:01112345678">011 1234-5678</a> ·
+            <a href="mailto:reservas@restaurante.com">reservas@restaurante.com</a>
+        </address>
+        <p><small>TP Final Desarrollo Web · UNLZ · 2026</small></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
