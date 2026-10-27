@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar una mesa</title>
+    <link rel="stylesheet" href="css/reserva.css">
+</head>
+<body>
+
+
+
+    <form action="#" method="post">
+        <h1>Reserva tu mesa</h1>
+        <p>Completa el formulario para realizar tu reserva.</p>
+        <label for="nombre">Nombre completo:</label><br>
+        <input type="text" id="nombre" name="nombre"
+               placeholder="Tu nombre" required>
+        <br><br>
+
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email"
+               placeholder="ejemplo@correo.com" required>
+        <br><br>
+
+        <label for="telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono"
+               placeholder="Tu teléfono" required>
+        <br><br>
+
+        <label for="fecha">Fecha de reserva:</label><br>
+        <input type="date" id="fecha" name="fecha" required>
+        <br><br>
+
+        <label for="hora">Hora de reserva:</label><br>
+        <input type="time" id="hora" name="hora" required>
+        <br><br>
+
+        <label for="personas">Cantidad de personas:</label><br>
+        <select id="personas" name="personas" required>
+            <option value="">Selecciona una cantidad</option>
+            <option value="1">1 persona</option>
+            <option value="2">2 personas</option>
+            <option value="3">3 personas</option>
+            <option value="4">4 personas</option>
+            <option value="5">5 personas</option>
+            <option value="6">6 o más personas</option>
+        </select>
+        <br><br>
+
+        <label for="comentarios">Comentarios adicionales:</label><br>
+        <textarea id="comentarios" name="comentarios"
+                  rows="4"
+                  placeholder="Alergias, preferencias o solicitudes..."></textarea>
+        <br><br>
+
+        <button type="submit">Reservar mesa</button>
+        <button type="reset">Limpiar formulario</button>
+
+    </form>
+
+</body>
+</html>
