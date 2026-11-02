@@ -11,6 +11,7 @@ $platos = [
     ["nombre" => "Pizza champignones", "descripcion" => "Pizza con muzzarella y champignones", "precio" => 23000, "foto" => "pizzaChampignones.jpg"],
      ["nombre" => "Pizza Muzzarella", "descripcion" => "Pizza con muzzarella y aceitunas", "precio" => 15000, "foto" => "pizzaMuzzarella.jpg"],
     ["nombre" => "Milanesas", "descripcion" => "Milanesas con pure de papas", "precio" => 24000, "foto" => "milanesas.jpg"],
+    ["nombre" => "Nugets de pollo para niños", "descripcion" => "Minis porciones de nugets de pollo con guarnicion", "precio" => 24000, "foto" => "polloNiños.jpg"],
     
     ["nombre" => "Vacio con papas", "descripcion" => "Vacio asado con papas al horno", "precio" => 14800, "foto" => "vacioConPapas.jpg"],
   ],
