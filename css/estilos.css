@@ -1,4 +1,177 @@
+/* =====================================================================
+   BASE DEL SITIO: se aplica a TODAS las páginas
+   Header, navegación, footer, botones e inicio
+   ===================================================================== */
 
+/* ---------- Generales ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.5;
+  background: #faf7f2;
+  color: #222127;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+img { max-width: 100%; }
+
+/* ---------- Link "Saltar al contenido": solo aparece al apretar Tab ---------- */
+.saltar-contenido {
+  position: absolute;
+  left: -9999px;
+}
+.saltar-contenido:focus {
+  left: 1rem;
+  top: 1rem;
+  z-index: 100;
+  padding: .5rem 1rem;
+  background: #fff;
+  color: #222127;
+  border-radius: 6px;
+}
+
+/* ---------- Header y navegación ---------- */
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+  padding: 1rem 2rem;
+  background: #222127;
+}
+
+.marca {
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-principal ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-principal a {
+  display: block;
+  padding: .5rem .9rem;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.nav-principal a:hover {
+  background: rgba(255, 255, 255, .12);
+}
+
+/* Página actual resaltada */
+.nav-principal a[aria-current="page"] {
+  background: #c0392b;
+}
+
+/* ---------- Botones ---------- */
+.boton.boton--secundario {
+  background: transparent;
+  border: 2px solid #fff;
+}
+
+/* ---------- Inicio: portada con la foto de fondo ---------- */
+.portada {
+  position: relative;
+  isolation: isolate;          /* la foto queda detrás del texto, pero dentro de la portada */
+  overflow: hidden;
+  padding: 6rem 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+}
+
+.portada img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(.45);     /* oscurece la foto para que se lea el texto */
+}
+
+.portada h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin: 0 0 .5rem;
+}
+
+.portada p {
+  color: #fff;
+  font-size: 1.2rem;
+  margin: 0 0 1.5rem;
+}
+
+/* Secciones del inicio (las que vienen después de la portada) como tarjetas */
+.portada ~ section {
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+}
+
+.portada ~ section h2 {
+  margin-top: 0;
+  color: #c0392b;
+}
+
+/* ---------- Footer ---------- */
+.pie {
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+  background: #222127;
+  color: #ddd;
+  text-align: center;
+}
+
+.pie p { color: #ddd; }
+
+.pie a { color: #fff; }
+
+.pie address { font-style: normal; }
+
+/* ---------- Celular ---------- */
+@media (max-width: 700px) {
+  .encabezado {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-principal ul {
+    justify-content: center;
+  }
+
+  .portada {
+    padding: 4rem 1rem;
+  }
+
+  .portada h1 {
+    font-size: 1.8rem;
+  }
+}
+
+/* =====================================================================
+   Estilos de cada sección
+   ===================================================================== */
 
 h1 {
   color: #222127;

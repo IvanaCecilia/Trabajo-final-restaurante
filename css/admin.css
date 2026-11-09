@@ -1,0 +1,288 @@
+/* =====================================================================
+   ADMIN.CSS – Estilos del login y del panel del encargado (Emma)
+   Se carga DESPUÉS de estilos.css en login.html y admin.html
+   ===================================================================== */
+
+/* ---------- Colores usados en este archivo ----------
+   El rojo es el mismo que usa Ivana en estilos.css.
+   Cuando armemos la paleta común, estas variables pasan a estilos.css. */
+:root {
+  --color-principal: #c0392b;
+  --color-principal-oscuro: #a93226;
+  --color-borde: #ccc;
+  --color-texto-suave: #555;
+
+  --color-libre: #2e7d32;      /* verde */
+  --color-reservada: #f9a825;  /* amarillo */
+  --color-ocupada: #c62828;    /* rojo */
+}
+
+/* =====================================================================
+   LOGIN
+   ===================================================================== */
+
+/* Tarjeta del formulario centrada */
+#form-login {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* El párrafo de aclaración, centrado debajo del título */
+#form-login ~ p,
+h1 + p {
+  text-align: center;
+  color: var(--color-texto-suave);
+}
+
+/* Cada label arriba de su campo */
+#form-login label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+/* Campos a todo el ancho */
+#form-login input {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0.7rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+/* Al hacer foco, borde rojo (igual que el buscador del menú) */
+#form-login input:focus {
+  outline: none;
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.2);
+}
+
+/* Botón Ingresar a todo el ancho */
+#form-login button {
+  width: 100%;
+  margin: 0.5rem 0 0;
+  padding: 0.8rem;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#form-login button:hover {
+  background: var(--color-principal-oscuro);
+}
+
+/* Mensaje de error (se usa en la semana 3, cuando el usuario o la contraseña estén mal) */
+.mensaje-error {
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 0.8rem 1rem;
+  background: #fdecea;
+  color: var(--color-ocupada);
+  border-left: 4px solid var(--color-ocupada);
+  border-radius: 6px;
+}
+
+/* =====================================================================
+   PANEL DEL ENCARGADO
+   ===================================================================== */
+
+/* Leyenda de colores */
+.leyenda-estados {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.estado {
+  display: inline-block;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.estado--libre     { background: var(--color-libre);     color: #fff; }
+.estado--reservada { background: var(--color-reservada); color: #222; }
+.estado--ocupada   { background: var(--color-ocupada);   color: #fff; }
+
+/* Grilla de mesas: se acomoda sola según el ancho de pantalla */
+.grilla-mesas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Tarjeta de cada mesa, con una franja de color según su estado */
+.mesa {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-left-width: 8px;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.mesa.estado--libre     { border-left-color: var(--color-libre);     background: #fff; color: inherit; }
+.mesa.estado--reservada { border-left-color: var(--color-reservada); background: #fff; color: inherit; }
+.mesa.estado--ocupada   { border-left-color: var(--color-ocupada);   background: #fff; color: inherit; }
+
+.mesa h3 {
+  margin: 0 0 0.3rem;
+}
+
+.mesa select {
+  width: 100%;
+  padding: 0.4rem;
+  margin: 0.3rem 0 0.6rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+}
+
+.mesa button,
+form[method="get"] button {
+  padding: 0.4rem 1rem;
+  background: var(--color-principal);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.mesa button:hover,
+form[method="get"] button:hover {
+  background: var(--color-principal-oscuro);
+}
+
+/* Filtro de fecha de las reservas */
+form[method="get"] {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+form[method="get"] input {
+  padding: 0.4rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+}
+
+/* Tabla de reservas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+th, td {
+  padding: 0.6rem 0.8rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background: var(--color-principal);
+  color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* En el celular, la tabla se desplaza de costado en vez de romper la página */
+@media (max-width: 700px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+
+/* =====================================================================
+   EMPLEADOS Y ROLES
+   ===================================================================== */
+
+/* Etiqueta del rol */
+.rol {
+  display: inline-block;
+  padding: .15rem .7rem;
+  border-radius: 999px;
+  background: #e0e0e0;
+  color: #222;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+.rol--super {
+  background: #222127;
+  color: #fff;
+}
+
+/* Botón eliminar de cada empleado */
+.boton-eliminar {
+  padding: .3rem .8rem;
+  background: #fff;
+  color: var(--color-ocupada);
+  border: 1px solid var(--color-ocupada);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.boton-eliminar:hover {
+  background: var(--color-ocupada);
+  color: #fff;
+}
+
+/* Formulario para agregar empleado: los campos se acomodan solos según el ancho */
+.form-empleado {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+}
+
+.form-empleado label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: .3rem;
+}
+
+.form-empleado input,
+.form-empleado select {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-empleado input:focus,
+.form-empleado select:focus {
+  outline: none;
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, .2);
+}
+
+.form-empleado .boton {
+  margin: 0;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
