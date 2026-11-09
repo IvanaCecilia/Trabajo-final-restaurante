@@ -5,6 +5,23 @@ include "includes/header.php";
 ?>
 <main class="contenedor">
     <h1> Nuestra carta </h1>
+<h1>Nuestra carta</h1>
+
+<!-- Buscador y filtros (solo diseño por ahora) -->
+<div class="barra-filtros">
+  <div class="buscador">
+    <input type="search" id="buscador" placeholder="Buscar plato..." aria-label="Buscar plato">
+    <button type="button" class="boton">Buscar</button>
+  </div>
+
+  <div class="botones-filtro">
+    <button type="button" class="filtro activo">Todos</button>
+    <?php foreach ($platos as $categoria => $lista): ?>
+      <button type="button" class="filtro"><?= htmlspecialchars($categoria) ?></button>
+    <?php endforeach; ?>
+  </div>
+</div>
+
     <!--Indice de categorias-->
     <nav class="indice-categorias">
         <?php foreach ($platos as $categoria => $lista): ?>
