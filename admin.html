@@ -26,7 +26,7 @@
 
     <main id="contenido">
         <h1>Panel del encargado</h1>
-        <p>Sesión iniciada como <strong>Encargado</strong>.</p>
+        <p>Sesión iniciada como <strong>Administrador</strong> · Rol: <span class="rol rol--super">Superadministrador</span></p>
 
         <!-- ============ MESAS ============ -->
         <section aria-labelledby="titulo-mesas">
@@ -167,6 +167,80 @@
                     </tr>
                 </tbody>
             </table>
+        </section>
+
+        <!-- ============ EMPLEADOS (solo superadministrador) ============ -->
+        <!-- En la semana 3, PHP muestra esta sección solo si el usuario logueado es superadministrador.
+             Los empleados ven las mesas y las reservas, pero no esta parte. -->
+        <section aria-labelledby="titulo-empleados">
+            <h2 id="titulo-empleados">Empleados</h2>
+            <p>Solo el superadministrador puede agregar o quitar usuarios del sistema.</p>
+
+            <!-- EJEMPLO: usuarios de muestra. En la semana 3 se cargan desde la base de datos. -->
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Rol</th>
+                        <th scope="col">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Administrador</td>
+                        <td>admin</td>
+                        <td><span class="rol rol--super">Superadministrador</span></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Carla Méndez</td>
+                        <td>carla</td>
+                        <td><span class="rol">Empleado</span></td>
+                        <td>
+                            <form action="admin.html" method="post">
+                                <input type="hidden" name="usuario_id" value="2">
+                                <button type="submit" class="boton-eliminar">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Diego Torres</td>
+                        <td>diego</td>
+                        <td><span class="rol">Empleado</span></td>
+                        <td>
+                            <form action="admin.html" method="post">
+                                <input type="hidden" name="usuario_id" value="3">
+                                <button type="submit" class="boton-eliminar">Eliminar</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Agregar empleado</h3>
+            <form id="form-empleado" class="form-empleado" action="admin.html" method="post">
+                <div class="campo">
+                    <label for="emp-nombre">Nombre y apellido</label>
+                    <input type="text" id="emp-nombre" name="nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="emp-usuario">Usuario</label>
+                    <input type="text" id="emp-usuario" name="usuario" required autocomplete="off">
+                </div>
+                <div class="campo">
+                    <label for="emp-password">Contraseña</label>
+                    <input type="password" id="emp-password" name="password" required autocomplete="new-password">
+                </div>
+                <div class="campo">
+                    <label for="emp-rol">Rol</label>
+                    <select id="emp-rol" name="rol">
+                        <option value="empleado" selected>Empleado</option>
+                        <option value="superadmin">Superadministrador</option>
+                    </select>
+                </div>
+                <button type="submit" class="boton">Agregar</button>
+            </form>
         </section>
     </main>
 

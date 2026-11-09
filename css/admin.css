@@ -209,3 +209,80 @@ tbody tr:nth-child(even) {
     white-space: nowrap;
   }
 }
+
+
+/* =====================================================================
+   EMPLEADOS Y ROLES
+   ===================================================================== */
+
+/* Etiqueta del rol */
+.rol {
+  display: inline-block;
+  padding: .15rem .7rem;
+  border-radius: 999px;
+  background: #e0e0e0;
+  color: #222;
+  font-size: .85rem;
+  font-weight: bold;
+}
+
+.rol--super {
+  background: #222127;
+  color: #fff;
+}
+
+/* Botón eliminar de cada empleado */
+.boton-eliminar {
+  padding: .3rem .8rem;
+  background: #fff;
+  color: var(--color-ocupada);
+  border: 1px solid var(--color-ocupada);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.boton-eliminar:hover {
+  background: var(--color-ocupada);
+  color: #fff;
+}
+
+/* Formulario para agregar empleado: los campos se acomodan solos según el ancho */
+.form-empleado {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  align-items: end;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+}
+
+.form-empleado label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: .3rem;
+}
+
+.form-empleado input,
+.form-empleado select {
+  width: 100%;
+  padding: .6rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-empleado input:focus,
+.form-empleado select:focus {
+  outline: none;
+  border-color: var(--color-principal);
+  box-shadow: 0 0 0 3px rgba(192, 57, 43, .2);
+}
+
+.form-empleado .boton {
+  margin: 0;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
