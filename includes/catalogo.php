@@ -21,11 +21,3 @@ $platos = [
     ["nombre" => "Porcion de torta", "descripcion" => "Porcion de torta variedad a eleccion.", "precio" => 5500, "foto" => "postre.Torta.jpg"],
   ],
 ];
-?>
-
-
-
-
-
-
-</php>
