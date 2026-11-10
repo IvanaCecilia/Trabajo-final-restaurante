@@ -270,3 +270,16 @@ p{
   background: #c0392b;
   color: #fff;
 }
+.pagina-reserva {
+  max-width: none;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+    url("../img/restaurante.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
