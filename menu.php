@@ -5,7 +5,6 @@ include "includes/header.php";
 ?>
 <main class="contenedor">
     <h1> Nuestra carta </h1>
-<h1>Nuestra carta</h1>
 
 <!-- Buscador y filtros (solo diseño por ahora) -->
 <div class="barra-filtros">
@@ -35,7 +34,7 @@ include "includes/header.php";
             <div class="grilla-platos">
                 <?php foreach ($lista as $i => $plato): ?>
                     <article class="tarjeta-plato">
-                        <img src="imagenes/<?= htmlspecialchars($plato['foto']) ?>"
+                        <img src="img/<?= htmlspecialchars($plato['foto']) ?>"
                             alt="<?= htmlspecialchars($plato['nombre']) ?>">
                         <h3><?= htmlspecialchars($plato['nombre']) ?></h3>
                         <p class="precio">$<?= number_format($plato['precio'], 0, ',', '.') ?></p>
@@ -54,4 +53,3 @@ include "includes/header.php";
 
 
 
-</main>

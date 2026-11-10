@@ -18,7 +18,7 @@ $platos = [
   "Postres" => [
     ["nombre" => "Ensalada de frutas", "descripcion" => "Bananas, frutillas, naranjas y manzana en cubos", "precio" => 4500, "foto" => "postreEnsaladaFrutas.jpg"],
     ["nombre" => "Postre helado", "descripcion" => "Bochas de helado sabores a eleccion.", "precio" => 6000, "foto" => "postreHelado.jpg"],
-    ["nombre" => "Porcion de torta", "descripcion" => "Porcion de torta variedad a eleccion.", "precio" => 5500, "foto" => "postre.Torta.jpg"],
+    ["nombre" => "Porcion de torta", "descripcion" => "Porcion de torta variedad a eleccion.", "precio" => 5500, "foto" => "postreTorta.jpg"],
   ],
 ];
 ?>
