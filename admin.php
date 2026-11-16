@@ -1,28 +1,8 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nombre del Restaurante: menú y reservas online.">
-    <title>Inicio | Nombre del Restaurante</title>
-    <link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/admin.css">
-</head>
-<body>
-    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
-
-    <header class="encabezado">
-        <a class="marca" href="index.html">Nombre del Restaurante</a>
-
-        <nav class="nav-principal" aria-label="Navegación principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="menu.php">Menú</a></li>
-                <li><a href="reserva.html">Reservar</a></li>
-                <li><a href="index.html">Salir</a></li>
-            </ul>
-        </nav>
-    </header>
+<?php
+$titulo = 'Panel del encargado';
+$estilos = ['css/admin.css'];
+include 'includes/header.php';
+?>
 
     <main id="contenido">
         <h1>Panel del encargado</h1>
@@ -43,7 +23,7 @@
                 <article class="mesa estado--libre">
                     <h3>Mesa 1</h3>
                     <p>2 personas · <strong>Libre</strong></p>
-                    <form action="admin.html" method="post">
+                    <form action="admin.php" method="post">
                         <input type="hidden" name="mesa_id" value="1">
                         <label for="estado-1">Cambiar a</label>
                         <select id="estado-1" name="estado">
@@ -58,7 +38,7 @@
                 <article class="mesa estado--reservada">
                     <h3>Mesa 5</h3>
                     <p>4 personas · <strong>Reservada</strong></p>
-                    <form action="admin.html" method="post">
+                    <form action="admin.php" method="post">
                         <input type="hidden" name="mesa_id" value="5">
                         <label for="estado-5">Cambiar a</label>
                         <select id="estado-5" name="estado">
@@ -73,7 +53,7 @@
                 <article class="mesa estado--ocupada">
                     <h3>Mesa 6</h3>
                     <p>4 personas · <strong>Ocupada</strong></p>
-                    <form action="admin.html" method="post">
+                    <form action="admin.php" method="post">
                         <input type="hidden" name="mesa_id" value="6">
                         <label for="estado-6">Cambiar a</label>
                         <select id="estado-6" name="estado">
@@ -88,7 +68,7 @@
                 <article class="mesa estado--libre">
                     <h3>Mesa 9</h3>
                     <p>6 personas · <strong>Libre</strong></p>
-                    <form action="admin.html" method="post">
+                    <form action="admin.php" method="post">
                         <input type="hidden" name="mesa_id" value="9">
                         <label for="estado-9">Cambiar a</label>
                         <select id="estado-9" name="estado">
@@ -103,7 +83,7 @@
                 <article class="mesa estado--reservada">
                     <h3>Mesa 11</h3>
                     <p>8 personas · <strong>Reservada</strong></p>
-                    <form action="admin.html" method="post">
+                    <form action="admin.php" method="post">
                         <input type="hidden" name="mesa_id" value="11">
                         <label for="estado-11">Cambiar a</label>
                         <select id="estado-11" name="estado">
@@ -121,7 +101,7 @@
         <section aria-labelledby="titulo-reservas">
             <h2 id="titulo-reservas">Reservas del 14/11/2026</h2>
 
-            <form action="admin.html" method="get">
+            <form action="admin.php" method="get">
                 <label for="filtro-fecha">Ver otro día</label>
                 <input type="date" id="filtro-fecha" name="fecha" value="2026-11-14">
                 <button type="submit">Ver</button>
@@ -198,7 +178,7 @@
                         <td>carla</td>
                         <td><span class="rol">Empleado</span></td>
                         <td>
-                            <form action="admin.html" method="post">
+                            <form action="admin.php" method="post">
                                 <input type="hidden" name="usuario_id" value="2">
                                 <button type="submit" class="boton-eliminar">Eliminar</button>
                             </form>
@@ -209,7 +189,7 @@
                         <td>diego</td>
                         <td><span class="rol">Empleado</span></td>
                         <td>
-                            <form action="admin.html" method="post">
+                            <form action="admin.php" method="post">
                                 <input type="hidden" name="usuario_id" value="3">
                                 <button type="submit" class="boton-eliminar">Eliminar</button>
                             </form>
@@ -219,7 +199,7 @@
             </table>
 
             <h3>Agregar empleado</h3>
-            <form id="form-empleado" class="form-empleado" action="admin.html" method="post">
+            <form id="form-empleado" class="form-empleado" action="admin.php" method="post">
                 <div class="campo">
                     <label for="emp-nombre">Nombre y apellido</label>
                     <input type="text" id="emp-nombre" name="nombre" required>
@@ -244,16 +224,4 @@
         </section>
     </main>
 
-    <footer class="pie">
-        <p><strong>Nombre del Restaurante</strong></p>
-        <address>
-            Av. Siempre Viva 742, Lomas de Zamora<br>
-            Tel: <a href="tel:01112345678">011 1234-5678</a> ·
-            <a href="mailto:reservas@restaurante.com">reservas@restaurante.com</a>
-        </address>
-        <p><small>TP Final Desarrollo Web · UNLZ · 2026</small></p>
-    </footer>
-
-    <script src="js/script.js"></script>
-</body>
-</html>
+<?php include 'includes/footer.php'; ?>
