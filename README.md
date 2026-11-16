@@ -12,5 +12,7 @@ Se agrego base de datos para guardar reservas.
 Se agrego diseño responsive.
 Se creo portada inicio con imagen.
 Se creo una nueva seccion empleados con roles definidos. 
+Se mejoro resolucion de imagenes, se elimino las anteriores y se agrego estilo en platos para que se adapten a todas las pantallas. 
+Se elimino carpeta catalogo php duplicada. 
 
 
