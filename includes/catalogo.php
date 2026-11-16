@@ -11,13 +11,13 @@ $platos = [
     ["nombre" => "Pizza champignones", "descripcion" => "Pizza con muzzarella y champignones", "precio" => 23000, "foto" => "pizzaChampignones.jpg"],
      ["nombre" => "Pizza Muzzarella", "descripcion" => "Pizza con muzzarella y aceitunas", "precio" => 15000, "foto" => "pizzaMuzzarella.jpg"],
     ["nombre" => "Milanesas", "descripcion" => "Milanesas con pure de papas", "precio" => 24000, "foto" => "milanesas.jpg"],
-    ["nombre" => "Nugets de pollo para niños", "descripcion" => "Minis porciones de nugets de pollo con guarnicion", "precio" => 24000, "foto" => "polloNiños.jpg"],
+    ["nombre" => "Nugets de pollo para niños", "descripcion" => "Minis porciones de nugets de pollo con guarnicion", "precio" => 24000, "foto" => "polloNinios.jpg"],
     
     ["nombre" => "Vacio con papas", "descripcion" => "Vacio asado con papas al horno", "precio" => 14800, "foto" => "vacioConPapas.jpg"],
   ],
   "Postres" => [
     ["nombre" => "Ensalada de frutas", "descripcion" => "Bananas, frutillas, naranjas y manzana en cubos", "precio" => 4500, "foto" => "postreEnsaladaFrutas.jpg"],
     ["nombre" => "Postre helado", "descripcion" => "Bochas de helado sabores a eleccion.", "precio" => 6000, "foto" => "postreHelado.jpg"],
-    ["nombre" => "Porcion de torta", "descripcion" => "Porcion de torta variedad a eleccion.", "precio" => 5500, "foto" => "postre.Torta.jpg"],
+    ["nombre" => "Porcion de torta", "descripcion" => "Porcion de torta variedad a eleccion.", "precio" => 5500, "foto" => "postreTorta.jpg"],
   ],
 ];
