@@ -286,3 +286,15 @@ tbody tr:nth-child(even) {
   font-size: 1rem;
   cursor: pointer;
 }
+
+
+/* Mensaje de confirmación (por ejemplo: "Empleado agregado.") */
+.mensaje-exito {
+  max-width: 400px;
+  margin: 1rem auto;
+  padding: 0.8rem 1rem;
+  background: #e8f5e9;
+  color: var(--color-libre);
+  border-left: 4px solid var(--color-libre);
+  border-radius: 6px;
+}
