@@ -10,7 +10,7 @@ include "includes/header.php";
 <div class="barra-filtros">
   <div class="buscador">
     <input type="search" id="buscador" placeholder="Buscar plato..." aria-label="Buscar plato">
-    <button type="button" class="boton">Buscar</button>
+    <button type="button" id="btnBuscar" class="boton">Buscar</button>
   </div>
 
   <div class="botones-filtro">
@@ -20,6 +20,7 @@ include "includes/header.php";
     <?php endforeach; ?>
   </div>
 </div>
+<p id="sinResultados" class="sin-resultados" hidden>No encontramos platos con ese criterio.</p>
 
     <!--Indice de categorias-->
     <nav class="indice-categorias">
@@ -47,7 +48,7 @@ include "includes/header.php";
         </section>
     <?php endforeach; ?>
 </main>
-
+<script src="js/menu.js"></script>
 <?php include 'includes/footer.php'; ?>
 
 

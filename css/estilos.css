@@ -224,13 +224,7 @@ p{
   gap: 1rem;
   margin: 1.5rem 0;
 }
-.plato img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  display: block;
-}
+
 /* Buscador */
 .buscador {
   display: flex;
@@ -276,3 +270,5 @@ p{
   background: #c0392b;
   color: #fff;
 }
+[hidden] { display: none !important; }
+.sin-resultados { text-align: center; color: #777; font-size: 1.1rem; margin: 2rem 0; }
