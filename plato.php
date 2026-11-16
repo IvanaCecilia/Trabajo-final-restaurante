@@ -17,7 +17,7 @@ include 'includes/header.php';
 
 <main class="contenedor">
   <article class="detalle-plato">
-    <img src="imagenes/<?= htmlspecialchars($plato['foto']) ?>"
+    <img src="img/<?= htmlspecialchars($plato['foto']) ?>"
          alt="<?= htmlspecialchars($plato['nombre']) ?>">
 
     <div class="info-plato">
