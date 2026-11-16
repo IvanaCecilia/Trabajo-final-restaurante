@@ -67,7 +67,7 @@ img { max-width: 100%; }
 .nav-principal a {
   display: block;
   padding: .5rem .9rem;
-  color: #fff;
+  color: #9e4f4f;
   text-decoration: none;
   border-radius: 6px;
 }
@@ -224,7 +224,13 @@ p{
   gap: 1rem;
   margin: 1.5rem 0;
 }
-
+.plato img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
 /* Buscador */
 .buscador {
   display: flex;
@@ -269,17 +275,4 @@ p{
 .filtro.activo {
   background: #c0392b;
   color: #fff;
-}
-.pagina-reserva {
-  max-width: none;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background:
-    linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
-    url("../img/restaurante.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
 }
