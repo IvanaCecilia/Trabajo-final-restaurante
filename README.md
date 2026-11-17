@@ -32,3 +32,4 @@ Para probar: admin / admin123. Creen un empleado desde el panel y entren con él
 3. La base de datos (reservas.db) se crea sola al abrir la primera página.
 4. Para entrar al panel: *Ingresar* → usuario admin, contraseña admin123.
 5. Desde el panel se pueden crear empleados y entrar con ellos para ver la diferencia de roles. 
+

@@ -299,12 +299,11 @@ p{
   flex-wrap: wrap;
 }
 .nav-principal a {
-  display: block;
-  color: #fff;
+  color: #fff;               /* letras blancas, bien legibles */
   text-decoration: none;
   padding: .6rem 1rem;
   border-radius: 6px;
-  transition: background .2s;
+  transition: background .2s, color .2s;
 }
 
 
