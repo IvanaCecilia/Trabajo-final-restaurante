@@ -272,3 +272,49 @@ p{
 }
 [hidden] { display: none !important; }
 .sin-resultados { text-align: center; color: #777; font-size: 1.1rem; margin: 2rem 0; }
+/* Encabezado */
+.encabezado {
+  background: #c0392b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: .5rem 1.5rem;
+}
+.marca {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Menú */
+.nav-principal ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: .25rem;
+  flex-wrap: wrap;
+}
+.nav-principal a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: .6rem 1rem;
+  border-radius: 6px;
+  transition: background .2s;
+}
+
+
+.nav-principal a:hover,
+.nav-principal a[aria-current="page"] {
+  background: #7b241c;
+  color: #fff;
+}
+
+
+.nav-principal a[aria-current="page"] {
+  box-shadow: inset 0 -3px 0 #fff;
+}
