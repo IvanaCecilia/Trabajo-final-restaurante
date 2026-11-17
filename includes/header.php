@@ -1,12 +1,20 @@
 <?php
 /*
- * HEADER COMÚN
- * Se incluye al principio de cada página PHP:  include 'includes/header.php';
+ * HEADER COMUN
+ * Se incluye al principio de cada pagina PHP:  include 'includes/header.php';
  *
  * Opcional, ANTES del include:
- *   $titulo = 'Menú';                 → título de la pestaña: "Menú | Nombre del Restaurante"
- *   $estilos = ['css/menu.css'];      → hojas de estilo extra de esa página
+ *   $titulo  = 'Menú';               → título de la pestaña: "Menú | Nombre del Restaurante"
+ *   $estilos = ['css/menu.css'];     → hojas de estilo extra de esa página
  */
+
+// La sesión se inicia acá, antes de mandar cualquier HTML,
+// así todas las páginas saben si hay alguien logueado.
+
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+$logueado = isset($_SESSION['usuario']);
 
 $nombreSitio = 'Nombre del Restaurante';
 
@@ -18,11 +26,18 @@ $paginaActual = basename($_SERVER['SCRIPT_NAME']);
 
 // Links del menú: archivo => texto
 $links = [
-    'index.html'   => 'Inicio',
+    'index.php'    => 'Inicio',
     'menu.php'     => 'Menú',
-    'reserva.html' => 'Reservar',
-    'login.html'   => 'Ingresar',
+    'reserva.php' => 'Reservar',
 ];
+
+// El último link cambia según haya alguien logueado o no
+if ($logueado) {
+    $links['admin.php']  = 'Panel';
+    $links['logout.php'] = 'Salir';
+} else {
+    $links['login.php'] = 'Ingresar';
+}
 
 // Páginas que no están en el menú pero pertenecen a una sección
 $secciones = [
@@ -35,6 +50,7 @@ $linkActivo = $secciones[$paginaActual] ?? $paginaActual;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?= htmlspecialchars($nombreSitio) ?>: menú y reservas online.">
     <title><?= htmlspecialchars($tituloPestania) ?></title>
     <link rel="stylesheet" href="css/estilos.css">
     <?php foreach ($estilos ?? [] as $hoja): ?>
@@ -45,7 +61,7 @@ $linkActivo = $secciones[$paginaActual] ?? $paginaActual;
     <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
 
     <header class="encabezado">
-        <a class="marca" href="index.html"><?= htmlspecialchars($nombreSitio) ?></a>
+        <a class="marca" href="index.php"><?= htmlspecialchars($nombreSitio) ?></a>
 
         <nav class="nav-principal" aria-label="Navegación principal">
             <ul>
