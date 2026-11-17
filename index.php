@@ -8,7 +8,7 @@ include 'includes/header.php';
             <img src="img/restaurante.jpg" alt="Salón del restaurante con las mesas preparadas para la cena">
             <h1 id="titulo-portada">Nombre del Restaurante</h1>
             <p>Cocina casera, parrilla y pastas en un ambiente familiar.</p>
-            <a class="boton" href="reserva.html">Reservar una mesa</a>
+            <a class="boton" href="reserva.php">Reservar una mesa</a>
             <a class="boton boton--secundario" href="menu.php">Ver el menú</a>
             
         </section>
@@ -35,7 +35,7 @@ include 'includes/header.php';
         <section aria-labelledby="titulo-reservas">
             <h2 id="titulo-reservas">Reservas</h2>
             <p>Reservá tu mesa online y te confirmamos al instante si hay lugar.</p>
-            <a class="boton" href="reserva.html">Hacer una reserva</a>
+            <a class="boton" href="reserva.php">Hacer una reserva</a>
         </section>
     </main>
 
