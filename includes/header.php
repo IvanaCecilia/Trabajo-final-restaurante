@@ -28,7 +28,7 @@ $paginaActual = basename($_SERVER['SCRIPT_NAME']);
 $links = [
     'index.php'    => 'Inicio',
     'menu.php'     => 'Menú',
-    'reserva.html' => 'Reservar',
+    'reserva.php' => 'Reservar',
 ];
 
 // El último link cambia según haya alguien logueado o no
