@@ -29,8 +29,8 @@ include "includes/header.php";
         <?php endforeach; ?>
     </nav>
     <?php foreach ($platos as $categoria => $lista): ?>
-        <section id="<?= urlencode($categoria) ?>">
-            <h2 class="titulo-categoria"><?= htmlspecialchars($categoria) ?></h2>
+    <section class="seccion-categoria" id="<?= urlencode($categoria) ?>">
+        <h2 class="titulo-categoria"><?= htmlspecialchars($categoria) ?></h2>
 
             <div class="grilla-platos">
                 <?php foreach ($lista as $i => $plato): ?>

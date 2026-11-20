@@ -7,15 +7,17 @@ Se creo un formulario de reservas, este sirve para que se reserve una o varias m
 Se creo un catalogo en php con un foreach (un array mulidimensional, un array general de platos y dentro un array de cada plato, lo mismo para entradas y postres) 
 Se agrego menu y platos en php. Y diseños de los mismos.
 Se sumaron botones solo diseño en menu y platos. 
-Se hicieron validadciones de campos del formulario. 
+Se hicieron validaciones de campos del formulario. 
 Se agrego base de datos para guardar reservas.
 Se agrego diseño responsive.
 Se creo portada inicio con imagen.
 Se creo una nueva seccion empleados con roles definidos. 
 Se mejoro resolucion de imagenes, se elimino las anteriores y se agrego estilo en platos para que se adapten a todas las pantallas. 
-Se elimino carpeta catalogo php duplicada. 
+Se elimino carpeta catalogo php duplicada.
+Se agregaron botones en menu.js.
 Páginas a PHP 
 Archivos index.html, login.html y admin.html ahora son index.php, login.php y admin.php, y usan el header y el footer compartidos de includes/.
+Se agrego formulario de cancelacion de reservas. 
 El header arranca la sesión y cambia el menú: sin login muestra “Ingresar”, y logueado muestra “Panel” y “Salir”.
 Login con sesiones
 El login verifica usuario y contraseña contra la base (password_verify, contraseñas encriptadas con password_hash).logout.php cierra la sesión.
@@ -32,3 +34,4 @@ Para probar: admin / admin123. Creen un empleado desde el panel y entren con él
 3. La base de datos (reservas.db) se crea sola al abrir la primera página.
 4. Para entrar al panel: *Ingresar* → usuario admin, contraseña admin123.
 5. Desde el panel se pueden crear empleados y entrar con ellos para ver la diferencia de roles. 
+

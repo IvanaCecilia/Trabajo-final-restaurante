@@ -67,7 +67,7 @@ img { max-width: 100%; }
 .nav-principal a {
   display: block;
   padding: .5rem .9rem;
-  color: #9e4f4f;
+  color: #fff;
   text-decoration: none;
   border-radius: 6px;
 }
@@ -79,6 +79,7 @@ img { max-width: 100%; }
 /* Página actual resaltada */
 .nav-principal a[aria-current="page"] {
   background: #c0392b;
+  color: #fff;
 }
 
 /* ---------- Botones ---------- */
@@ -299,16 +300,19 @@ p{
   flex-wrap: wrap;
 }
 .nav-principal a {
-  display: block;
-  color: #fff;
+  color: #fff;               /* letras blancas, bien legibles */
   text-decoration: none;
   padding: .6rem 1rem;
   border-radius: 6px;
-  transition: background .2s;
+  transition: background .2s, color .2s;
 }
 
 
-.nav-principal a:hover,
+.nav-principal a:hover {
+  background: rgba(255, 255, 255, .15);
+  color: #fff;
+}
+
 .nav-principal a[aria-current="page"] {
   background: #7b241c;
   color: #fff;
