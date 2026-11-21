@@ -12,10 +12,11 @@ if (!isset($platos[$cat]) || !ctype_digit((string)$id) || !isset($platos[$cat][(
 }
 
 $plato = $platos[$cat][(int)$id];
-include 'views/layout/header.php';
+$titulo = $plato['nombre'];
+include 'includes/header.php';
 ?>
 
-<main class="contenedor">
+<main class="contenedor" id="contenido">
   <article class="detalle-plato">
     <img src="img/<?= htmlspecialchars($plato['foto']) ?>"
          alt="<?= htmlspecialchars($plato['nombre']) ?>">
@@ -26,7 +27,7 @@ include 'views/layout/header.php';
       <p><?= htmlspecialchars($plato['descripcion']) ?></p>
       <p class="precio">$<?= number_format($plato['precio'], 0, ',', '.') ?></p>
 
-      <a class="boton" href="reservas.html">Reservar mesa</a>
+      <a class="boton" href="reservas.php">Reservar mesa</a>
       <a href="menu.php#<?= urlencode($cat) ?>">← Volver a la carta</a>
     </div>
   </article>

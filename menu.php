@@ -1,7 +1,8 @@
 <?php
 require "includes/catalogo.php";
 /** @var array $platos */
-include "views/layout/header.php";
+$titulo = "Menú";
+include "includes/header.php";
 ?>
 <main class="contenedor">
     <h1> Nuestra carta </h1>
