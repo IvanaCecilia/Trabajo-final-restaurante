@@ -2,7 +2,7 @@
 <?php
 $titulo = 'Reservar una mesa';
 $estilos = ['css/reserva.css'];
-include 'includes/header.php';
+include 'views/layout/header.php';
 ?>
 
 <main id="contenido" class="contenedor pagina-reserva">
@@ -92,4 +92,4 @@ include 'includes/header.php';
 
 <script src="js/reserva.js"></script>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'views/layout/footer.php'; ?>

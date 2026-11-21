@@ -1,6 +1,6 @@
 
 <?php
-require_once "conexion.php";
+require_once "models/conexion.php";
 
 // Verificar que se haya enviado el formulario.
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -28,7 +28,7 @@ try {
     ]);
 
     $titulo = "Cancelar reserva";
-    include 'includes/header.php';
+    include 'views/layout/header.php';
     ?>
 
     <main id="contenido" class="contenedor">
@@ -53,7 +53,7 @@ try {
     </main>
 
     <?php
-    include 'includes/footer.php';
+    include 'views/layout/footer.php';
 
 } catch (PDOException $e) {
     error_log("Error al cancelar reserva: " . $e->getMessage());

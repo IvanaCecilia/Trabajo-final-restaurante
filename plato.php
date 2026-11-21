@@ -33,4 +33,4 @@ include 'includes/header.php';
   </article>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'views/layout/footer.php'; ?>

@@ -50,7 +50,7 @@ include "includes/header.php";
     <?php endforeach; ?>
 </main>
 <script src="js/menu.js"></script>
-<?php include 'includes/footer.php'; ?>
+<?php include 'views/layout/footer.php'; ?>
 
 
 
