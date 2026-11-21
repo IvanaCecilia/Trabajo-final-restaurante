@@ -10,7 +10,7 @@
  */
 
 try {
-    $ruta = __DIR__ . '/reservas.db';
+    $ruta = __DIR__ . '/../reservas.db';
 
     $conexion = new PDO('sqlite:' . $ruta);
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

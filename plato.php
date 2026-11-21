@@ -12,7 +12,7 @@ if (!isset($platos[$cat]) || !ctype_digit((string)$id) || !isset($platos[$cat][(
 }
 
 $plato = $platos[$cat][(int)$id];
-include 'includes/header.php';
+include 'views/layout/header.php';
 ?>
 
 <main class="contenedor">
@@ -32,4 +32,4 @@ include 'includes/header.php';
   </article>
 </main>
 
-<?php include 'includes/footer.php'; ?>
+<?php include 'views/layout/footer.php'; ?>

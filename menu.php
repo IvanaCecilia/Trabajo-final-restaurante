@@ -1,7 +1,7 @@
 <?php
 require "includes/catalogo.php";
 /** @var array $platos */
-include "includes/header.php";
+include "views/layout/header.php";
 ?>
 <main class="contenedor">
     <h1> Nuestra carta </h1>
@@ -49,7 +49,7 @@ include "includes/header.php";
     <?php endforeach; ?>
 </main>
 <script src="js/menu.js"></script>
-<?php include 'includes/footer.php'; ?>
+<?php include 'views/layout/footer.php'; ?>
 
 
 
