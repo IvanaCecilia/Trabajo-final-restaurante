@@ -1,6 +1,6 @@
 
 <?php
-require_once "conexion.php";
+require_once "models/conexion.php";
 
 // Comprobar que el formulario se haya enviado por POST.
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
@@ -73,7 +73,7 @@ try {
     if ($personas === "6+") {
         // No guardamos automáticamente reservas de grupos grandes.
         $titulo = "Consulta para grupos grandes";
-        include 'includes/header.php';
+        include 'views/layout/header.php';
         ?>
 
         <main id="contenido" class="contenedor">
@@ -85,7 +85,7 @@ try {
         </main>
 
         <?php
-        include 'includes/footer.php';
+        include 'views/layout/footer.php';
         exit;
     }
 
@@ -111,7 +111,7 @@ try {
 
     // Mostrar la confirmación.
     $titulo = "Reserva confirmada";
-    include 'includes/header.php';
+    include 'views/layout/header.php';
     ?>
 
     <main id="contenido" class="contenedor">
@@ -134,7 +134,7 @@ try {
     </main>
 
     <?php
-    include 'includes/footer.php';
+    include 'views/layout/footer.php';
 
 } catch (PDOException $e) {
     error_log("Error al guardar reserva: " . $e->getMessage());

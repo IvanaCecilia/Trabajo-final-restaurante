@@ -1,7 +1,8 @@
 <?php
 /*
- * HEADER COMUN
- * Se incluye al principio de cada pagina PHP:  include 'includes/header.php';
+ * VISTA: HEADER COMUN (layout)
+ * Lo incluye el controlador antes de la vista de cada pagina:
+ *     require 'views/layout/header.php';
  *
  * Opcional, ANTES del include:
  *   $titulo  = 'Menú';               → título de la pestaña: "Menú | Nombre del Restaurante"

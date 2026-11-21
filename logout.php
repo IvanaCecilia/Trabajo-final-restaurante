@@ -1,6 +1,7 @@
 <?php
 /*
- * LOGOUT: cierra la sesión y vuelve al inicio
+ * CONTROLADOR: LOGOUT (Emma)
+ * Cierra la sesión y vuelve al inicio. No tiene vista.
  */
 session_start();
 
