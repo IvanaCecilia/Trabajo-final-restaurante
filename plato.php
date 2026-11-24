@@ -13,7 +13,7 @@ if (!isset($platos[$cat]) || !ctype_digit((string)$id) || !isset($platos[$cat][(
 
 $plato = $platos[$cat][(int)$id];
 $titulo = $plato['nombre'];
-include 'includes/header.php';
+include 'views/layout/header.php';
 ?>
 
 <main class="contenedor" id="contenido">

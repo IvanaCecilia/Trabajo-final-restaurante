@@ -2,9 +2,9 @@
 require "includes/catalogo.php";
 /** @var array $platos */
 $titulo = "Menú";
-include "includes/header.php";
-?>
-<main class="contenedor">
+include "views/layout/header.php";
+ ? > 
+ < m a i n  c   Qlass="contenedor">
     <h1> Nuestra carta </h1>
 
 <!-- Buscador y filtros (solo diseño por ahora) -->
