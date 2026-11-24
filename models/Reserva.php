@@ -19,9 +19,14 @@ function validarReserva(array $datos): string
         return 'El correo electrónico no es válido.';
     }
 
-    if (!preg_match('/^\+?[0-9\s()-]{7,20}$/', $datos['telefono'])) {
-        return 'El teléfono no es válido.';
-    }
+   if (!preg_match('/^\+?[0-9\s()-]+$/', $datos['telefono'])) {
+    return 'El teléfono solo puede contener números.';
+}
+
+$soloNumeros = preg_replace('/\D/', '', $datos['telefono']);
+if (strlen($soloNumeros) < 7 || strlen($soloNumeros) > 10) {
+    return 'El teléfono debe tener entre 7 y 10 números.';
+}
 
     // La fecha tiene que existir y tener formato AAAA-MM-DD
     $fechaObjeto = DateTime::createFromFormat('!Y-m-d', $datos['fecha']);

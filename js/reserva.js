@@ -38,10 +38,12 @@ telefono.addEventListener("input", function () {
     const expresion = /^\+?[0-9\s()-]+$/;
     const cantidadNumeros = telefono.value.replace(/\D/g, "").length;
 
-    if (!expresion.test(telefono.value) || cantidadNumeros < 7) {
-        telefono.setCustomValidity(
-            "Ingresá un teléfono válido, usando números."
-        );
+    if (!expresion.test(telefono.value)) {
+        telefono.setCustomValidity("Ingresá un teléfono válido, usando solo números.");
+    } else if (cantidadNumeros < 7) {
+        telefono.setCustomValidity("El teléfono debe tener al menos 7 números.");
+    } else if (cantidadNumeros > 10) {
+        telefono.setCustomValidity("El teléfono no puede tener más de 10 números.");
     } else {
         telefono.setCustomValidity("");
     }
