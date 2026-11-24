@@ -7,7 +7,7 @@
     <main id="contenido">
         <section class="portada" aria-labelledby="titulo-portada">
             <img src="img/restaurante.jpg" alt="Salón del restaurante con las mesas preparadas para la cena">
-            <h1 id="titulo-portada">Nombre del Restaurante</h1>
+            <h1 id="titulo-portada">Sabores de siempre</h1>
             <p>Cocina casera, parrilla y pastas en un ambiente familiar.</p>
             <a class="boton" href="reserva.php">Reservar una mesa</a>
             <a class="boton boton--secundario" href="menu.php">Ver el menú</a>
