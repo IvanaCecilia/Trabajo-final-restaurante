@@ -27,7 +27,7 @@ include 'views/layout/header.php';
       <p><?= htmlspecialchars($plato['descripcion']) ?></p>
       <p class="precio">$<?= number_format($plato['precio'], 0, ',', '.') ?></p>
 
-      <a class="boton" href="reservas.php">Reservar mesa</a>
+      <a class="boton" href="reserva.php">Reservar mesa</a>
       <a href="menu.php#<?= urlencode($cat) ?>">← Volver a la carta</a>
     </div>
   </article>
