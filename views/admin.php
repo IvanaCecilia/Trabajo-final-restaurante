@@ -5,6 +5,13 @@
  * Recibe del controlador:
  *   $usuarioActual, $esSuperadmin, $mensaje, $mesas, $fecha, $reservas, $empleados
  */
+/** @var array $usuarioActual */
+/** @var bool $esSuperadmin */
+/** @var array|null $mensaje */
+/** @var array $mesas */
+/** @var string $fecha */
+/** @var array $reservas */
+/** @var array $empleados */
 ?>
     <main id="contenido">
         <h1>Panel del encargado</h1>

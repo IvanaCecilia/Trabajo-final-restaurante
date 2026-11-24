@@ -17,7 +17,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 $logueado = isset($_SESSION['usuario']);
 
-$nombreSitio = 'Nombre del Restaurante';
+$nombreSitio = 'Sabores de siempre';
 
 // Título de la pestaña
 $tituloPestania = isset($titulo) ? $titulo . ' | ' . $nombreSitio : $nombreSitio;
