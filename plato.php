@@ -1,17 +1,17 @@
 <?php
-require 'includes/catalogo.php';
+require 'models/Plato.php';
 
 $cat = $_GET['cat'] ?? '';
 $id  = $_GET['id'] ?? '';
 
-// Validar que la categoría y el plato existan
-if (!isset($platos[$cat]) || !ctype_digit((string)$id) || !isset($platos[$cat][(int)$id])) {
+// Le pedimos el plato al modelo (devuelve null si no existe)
+$plato = obtenerPlato($cat, $id);
+
+if ($plato === null) {
     http_response_code(404);
     echo "Plato no encontrado. <a href='menu.php'>Volver a la carta</a>";
     exit;
 }
-
-$plato = $platos[$cat][(int)$id];
 $titulo = $plato['nombre'];
 include 'views/layout/header.php';
 ?>
