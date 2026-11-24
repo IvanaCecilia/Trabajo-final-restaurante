@@ -1,9 +1,9 @@
-# Sistema web de restaurante
+# Sabores de siempre - Sistema web de restaurante
 
 Trabajo Práctico Final de **Desarrollo Web**. Universidad Nacional de Lomas de Zamora (UNLZ).
 
 - **Profesora:** Tec. Agustina Aguirre
-- **Integrantes:** Emmanuel Balzi · Ivana · Bruno
+- **Integrantes:** Emmanuel · Ivana · Bruno
 
 Sistema web para un restaurante: los clientes ven el menú, consultan el detalle de cada plato y reservan una mesa online. El personal ingresa a un panel protegido para ver las reservas y manejar el estado de las mesas. Además, un superadministrador gestiona a los empleados.
 
@@ -48,7 +48,7 @@ Para probar el rol de empleado: entrar como `admin`, crear un empleado desde la 
 | Catálogo | `menu.php` | 13 platos en tres categorías, cargados desde un array de PHP y recorridos con `foreach`. |
 | Detalle | `plato.php?cat=...&id=...` | Foto, descripción y precio de cada plato. Si el plato no existe, muestra "Plato no encontrado" (404). |
 | Buscador y filtro | `js/menu.js` | Filtro por categoría y buscador por nombre que ignora mayúsculas y tildes, sin recargar la página. |
-| Formulario | `reserva.php` | Reserva con nombre, email, teléfono, fecha, hora, personas y comentarios. Se valida con JavaScript y otra vez con PHP. Al confirmar, se entrega un **número de reserva**. |
+| Formulario | `reserva.php` | Reserva con nombre, email, teléfono (de 7 a 10 números), fecha, hora, personas y comentarios. Se valida con JavaScript y otra vez con PHP. Al confirmar, se entrega un **número de reserva**. |
 | Cancelación | `reserva.php` → `cancelar_reserva.php` | El cliente cancela su reserva ingresando el número que recibió. |
 | Login | `login.php` | Usuario y contraseña verificados contra la base, con sesiones de PHP. |
 | Zona protegida | `admin.php` | Panel del personal: mesas, reservas del día y empleados. Sin sesión iniciada, redirige al login. |
@@ -204,6 +204,9 @@ Los nombres técnicos (tablas, columnas, variables y archivos) no llevan tildes 
 - Proyecto organizado en Modelo, Vista y Controlador.
 - Header y footer en un único lugar (`views/layout/`).
 - Correcciones de las devoluciones: nombres técnicos sin tildes ni eñes, catálogo unificado, validaciones de fecha y de cantidad de personas, confirmación antes de eliminar un empleado, control de usuarios eliminados con sesión abierta.
+- Nombre del restaurante: **Sabores de siempre** (en el header, la portada y el título de cada página).
+- Validación del teléfono más precisa (entre 7 y 10 números), con un mensaje distinto para cada error.
+- Corrección del botón "Reservar mesa" en el detalle de cada plato.
 
 ---
 
