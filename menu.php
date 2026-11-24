@@ -1,6 +1,6 @@
 <?php
-require "includes/catalogo.php";
-/** @var array $platos */
+require "models/Plato.php";
+$platos = obtenerCatalogo();
 $titulo = "Menú";
 include "views/layout/header.php";
  ?>
