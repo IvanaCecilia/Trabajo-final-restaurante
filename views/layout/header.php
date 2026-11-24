@@ -66,9 +66,9 @@ $linkActivo = $secciones[$paginaActual] ?? $paginaActual;
 
         <nav class="nav-principal" aria-label="Navegación principal">
             <ul>
-                <?php foreach ($links as $archivo => $texto): ?>
+                <?php foreach ($links as $archivoLink => $textoLink): ?>
                     <li>
-                        <a href="<?= $archivo ?>"<?= $archivo === $linkActivo ? ' aria-current="page"' : '' ?>><?= $texto ?></a>
+                        <a href="<?= $archivoLink ?>"<?= $archivoLink === $linkActivo ? ' aria-current="page"' : '' ?>><?= $textoLink ?></a>
                     </li>
                 <?php endforeach; ?>
             </ul>

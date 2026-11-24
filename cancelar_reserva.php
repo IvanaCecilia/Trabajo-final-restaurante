@@ -1,63 +1,42 @@
-
 <?php
-require_once "models/conexion.php";
+/*
+ * CONTROLADOR: CANCELAR RESERVA (Bruno)
+ * Recibe el numero de reserva y le pide al modelo que la cancele.
+ */
+session_start();
+require_once 'models/conexion.php';
+require_once 'models/Reserva.php';
 
-// Verificar que se haya enviado el formulario.
-if ($_SERVER["REQUEST_METHOD"] !== "POST") {
-    header("Location: reserva.php");
+// Solo se llega por el formulario (POST)
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Location: reserva.php');
     exit;
 }
 
-// Obtener el número de reserva.
-$idReserva = filter_input(INPUT_POST, "id_reserva", FILTER_VALIDATE_INT);
+$idReserva = filter_input(INPUT_POST, 'id_reserva', FILTER_VALIDATE_INT);
 
-// Validar el número.
 if (!$idReserva || $idReserva <= 0) {
-    exit("El número de reserva ingresado no es válido.");
+    $encabezado = 'Número no válido';
+    $texto      = 'El número de reserva ingresado no es válido.';
+} else {
+    try {
+        if (cancelarReserva($conexion, $idReserva)) {
+            $encabezado = 'Reserva cancelada';
+            $texto      = "La reserva número $idReserva fue cancelada correctamente.";
+        } else {
+            $encabezado = 'No encontramos esa reserva';
+            $texto      = 'Verificá que el número ingresado sea correcto.';
+        }
+    } catch (PDOException $e) {
+        error_log('Error al cancelar reserva: ' . $e->getMessage());
+        http_response_code(500);
+        $encabezado = 'Ocurrió un error';
+        $texto      = 'No pudimos cancelar la reserva. Intentá nuevamente.';
+    }
 }
 
-try {
+$titulo = 'Cancelar reserva';
 
-    // Eliminar la reserva que coincida con el ID.
-    $consulta = $conexion->prepare(
-        "DELETE FROM reservas WHERE id = :id"
-    );
-
-    $consulta->execute([
-        ":id" => $idReserva
-    ]);
-
-    $titulo = "Cancelar reserva";
-    include 'views/layout/header.php';
-    ?>
-
-    <main id="contenido" class="contenedor">
-
-        <?php if ($consulta->rowCount() > 0): ?>
-
-            <h1>Reserva cancelada</h1>
-            <p>La reserva número
-                <strong><?= htmlspecialchars((string)$idReserva) ?></strong>
-                fue cancelada correctamente.
-            </p>
-
-        <?php else: ?>
-
-            <h1>No encontramos esa reserva</h1>
-            <p>Verificá que el número ingresado sea correcto.</p>
-
-        <?php endif; ?>
-
-        <a href="reserva.php">Volver a reservas</a>
-
-    </main>
-
-    <?php
-    include 'views/layout/footer.php';
-
-} catch (PDOException $e) {
-    error_log("Error al cancelar reserva: " . $e->getMessage());
-    http_response_code(500);
-    echo "Ocurrió un error al cancelar la reserva.";
-}
-?>
+require 'views/layout/header.php';
+require 'views/reserva_mensaje.php';
+require 'views/layout/footer.php';
